@@ -138,11 +138,70 @@ header, main{
     
 }
 
+.section-hero-overlay{
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    font-size: 300%;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));    
+    color: rgba(255, 255, 255, .5);
+    background-size: contain;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem !important;
+    font-size: 120%;
+    transition: 250ms ease-in-out;
+}
+
+.hero-overlay:hover{
+    color: white;
+    transition: 250ms ease-in-out;
+}
+
+.overlay-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: .2rem;
+}
+
+
+.overlay-text span{
+    font-size: 15%;
+    font-weight: 200;
+}
+
+.overlay-text h2 {
+    margin: inherit;
+    margin: 0 ;
+    font-size:  75%;
+}
+
+.overlay-icon {
+    display: flex;
+    gap: .4rem;
+    align-items: flex-end;
+}
+
+.overlay-icon a svg , span svg{
+    width: .6rem;
+}
+
 .hero-img {
     max-width: 1920px;
     width: 100%;
     aspect-ratio: 16/7;
-    border-radius: var(--border-radius);
 }
 
 .hero-creator{
@@ -629,22 +688,43 @@ div.instructor-text-score{
 .section-element{
     background-color: var(--color-primary);
     border-radius: var(--border-radius);
-    padding: 3rem;
+    padding: 2rem 2rem 0 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+}
+
+.element-main-img {
+    display: flex;
+    margin: 0 auto 4rem auto;
+    align-items: center;
+
 }
 
 .section-element-bottom-grid{
     width: 100%;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: .4rem;
+}
 
+.section-element-bottom-grid-img {
+    width: 100%;
+    background: var(--color-primary);
 }
 
 .section-element-bottom-grid img {
-    max-height: 264px;
+    flex: 1;
+    width: 100%;
+    aspect-ratio: 3/2;
     border-radius: var(--border-radius-sm);
+}
+
+.section-element-bottom-grid img:hover {
+    opacity: .7;
+    transition: 500ms ease-in-out;
 }
 
 
@@ -706,6 +786,13 @@ div.instructor-text-score{
 .section-end-card-heading {
     color: white;
 }
+
+.section-end-footer-text {
+    padding-top: 2rem;
+    text-align: right;
+}
+
+
 
 
 /* Footer */
