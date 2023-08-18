@@ -675,6 +675,53 @@ div.instructor-text-score{
     padding-bottom: .3rem;
 }
 
+.creator-table {
+border-spacing: 0;
+border-color: gray;    
+}
+
+.creator-table th{
+    padding: 1.5vw;
+}
+
+.creator-table td{
+    padding: 2vw 1.5vw;
+}
+
+.creator-table tr:not(thead tr){    
+    position: relative;
+}
+
+.creator-table tr::before{    
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: rgb(225, 225, 225);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.creator-table tr:not(thead tr):hover {
+    background-color: rgba(211, 211, 211, 0.142);
+    transition: 300ms ease-in-out;
+}
+
+.table-text-truncated {
+    width: max(45%,55%);
+    margin: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.creator-table-creator-name {
+    font-size: 130% !important;
+    display: flex;
+    width: fit-content;
+    justify-content: flex-start;
+}
+
 .color-white{
     color: var(--color-bg-secondary) !important;
     fill: var(--color-white) !important;
